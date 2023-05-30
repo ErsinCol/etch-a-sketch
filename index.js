@@ -14,8 +14,17 @@ for(let counter = 0 ; counter < 256 ; counter++){
     child.style.flexBasis = '50px'
     child.style.margin = '0px'
     child.style.border = '0px'
+    child.classList.add('child')
     container.appendChild(child)
 }
+
+const childs = document.querySelectorAll('.child')
+
+childs.forEach(child=>{
+    child.addEventListener('mouseover', (e)=>{
+        child.classList.add('hovered')
+    })
+})
 
 
 
